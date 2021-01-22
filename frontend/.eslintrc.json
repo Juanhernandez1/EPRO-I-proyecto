@@ -1,0 +1,75 @@
+{
+  "settings": {
+    "react": {
+      "version": "^16.13.1"
+    }
+  },
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": [
+    "react-app",
+    "airbnb",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "unicorn", "prettier"],
+  "rules": {
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": {
+          "pascalCase": true
+        },
+        "ignore": ["^index\\.js$", "^index\\.jsx$", "^electron\\.js$", "^www\\.js$"]
+      }
+    ],
+    "prettier/prettier": ["error"],
+    "react/jsx-fragments": "off",
+    "react/prop-types": "warn",
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "react/no-unused-state": "warn",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/jsx-one-expression-per-line": "warn",
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ],
+    "jsx-a11y/label-has-for": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ],
+    "react/no-unused-prop-types": "warn",
+    "react/button-has-type": "warn"
+  }
+}
