@@ -1,6 +1,6 @@
 # EPRO-I-proyecto
 
-**Deplegar Servidro de DEV:**
+**Deplegar Servidor de DEV:**
 
 dentro del forlde de la app =>
 ```npm start```
