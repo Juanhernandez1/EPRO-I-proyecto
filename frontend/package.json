@@ -19,10 +19,38 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
+    "settings": {
+      "react": {
+        "version": "17.0.1"
+      }
+    },
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "plugins": [
+      "unicorn",
+      "prettier"
+    ],
+    "rules": {
+      "unicorn/filename-case": [
+        "error",
+        {
+          "cases": {
+            "pascalCase": true
+          },
+          "ignore": [
+            "^index\\.js$",
+            "^index\\.jsx$",
+            "^electron\\.js$",
+            "^www\\.js$"
+          ]
+        }
+      ],
+      "prettier/prettier": [
+        "error"
+      ]
+    }
   },
   "browserslist": {
     "production": [
@@ -36,5 +64,10 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3100"
+  "proxy": "http://localhost:3100",
+  "devDependencies": {
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-unicorn": "^27.0.0",
+    "prettier": "2.2.1"
+  }
 }

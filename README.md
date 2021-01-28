@@ -1,8 +1,9 @@
 # EPRO-I-proyecto
 
 **Deplegar Servidro de DEV:**
+
 dentro del forlde de la app =>
-```npm start```
+`npm start`
 
 // Ejmeplo:
 
@@ -22,16 +23,21 @@ npm start
 
 ---
 
-**FAQ**  
-## Dependecia a Instalar
-- [Git] (https://git-scm.com/)
-- [Postgres](https://bitnami.com/stack/lamp/installer)
-- [Node js](https://nodejs.org/es/) 
+**FAQ**
 
-## aprender 
+## Dependecia a Instalar
+
+- [Git](https://git-scm.com/)
+- [Postgres](https://bitnami.com/stack/lamp/installer)
+- [Node js](https://nodejs.org/es/)
+
+## aprender
+
 - javascript - el estandar minimo sera ES6 (ecmascript 6)
-- React js - version 17 
+- React js - version 17
 - Redux js - Estados de aplicasiones Web
 - Axios js - para peticion a API
+
 ## extra
+
 - uso de insomnia o postman para testing de la API
