@@ -50,7 +50,7 @@
           "ignore": [
             "^index\\.js$",
             "^index\\.jsx$",
-            "^electron\\.js$",
+            "^App.test\\.js$",
             "^www\\.js$"
           ]
         }
