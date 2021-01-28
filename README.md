@@ -26,7 +26,7 @@ npm start
 
 **FAQ**  
 ## Dependecia a Instalar
-- [Git] (https://git-scm.com/)
+- [Git](https://git-scm.com/)
 - [Postgres](https://bitnami.com/stack/lamp/installer)
 - [Node js](https://nodejs.org/es/) 
 
