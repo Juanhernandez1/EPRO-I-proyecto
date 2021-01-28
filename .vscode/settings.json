@@ -6,7 +6,21 @@
     "**/*.rescriptsrc.js/": true,
     "**/*.webpack.config.js/": true,
     "**/*yarn.lock/": true,
-    "**/*.eslintcache/": true
+    "**/*.eslintcache/": true,
+    "**/*.eslintrc.json/": true
   },
-  "eslint.nodePath": "frontend/node_modules/eslint/"
+  "eslint.nodePath": "frontend/node_modules/eslint/",
+  "eslint.alwaysShowStatus": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay"
 }
