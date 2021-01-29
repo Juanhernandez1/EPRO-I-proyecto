@@ -4,10 +4,10 @@
  * * Módulos y dependencias.
  */
 
-import { createServer } from 'http';
-import app from '../App';
+import { createServer } from "http";
+import app from "../App";
 
-const debug = require('debug')('backend:server');
+const debug = require("debug")("backend:server");
 
 /**
  * * Normaliza un puerto en un número
@@ -33,27 +33,27 @@ function normalizePort(val) {
  * * Obteniendo el puerto del entorno y usarlo en Express.
  */
 
-const port = normalizePort(process.env.PORT || '3100');
-app.set('port', port);
+const port = normalizePort(process.env.PORT || "3100");
+app.set("port", port);
 
 /**
  * * Detector de eventos para el evento "error" del servidor HTTP.
  */
 
 function onError(error) {
-  if (error.syscall !== 'listen') {
+  if (error.syscall !== "listen") {
     throw error;
   }
 
-  const bind = typeof port === 'string' ? `Pipe ${port}` : `Port ${port}`;
+  const bind = typeof port === "string" ? `Pipe ${port}` : `Port ${port}`;
 
   // manejar errores de escucha específicos con mensajes amigables
   switch (error.code) {
-    case 'EACCES':
+    case "EACCES":
       console.error(`${bind}, Requiere Privilegios`);
       process.exit(1);
       break;
-    case 'EADDRINUSE':
+    case "EADDRINUSE":
       console.error(`${bind} Esta en uso`);
       process.exit(1);
       break;
@@ -74,7 +74,7 @@ const server = createServer(app);
 
 function onListening() {
   const addr = server.address();
-  const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;
+  const bind = typeof addr === "string" ? `pipe ${addr}` : `port ${addr.port}`;
   debug(`Listening on ${bind}`);
 }
 
@@ -86,5 +86,5 @@ server.listen(port, () => {
   console.log(`Servidor Iniciado 🚀 
  en el puerto: ${port}`);
 });
-server.on('error', onError);
-server.on('listening', onListening);
+server.on("error", onError);
+server.on("listening", onListening);

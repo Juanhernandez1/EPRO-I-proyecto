@@ -1,13 +1,13 @@
-import createError from 'http-errors';
-import express, { json, urlencoded } from 'express';
+import createError from "http-errors";
+import express, { json, urlencoded } from "express";
 // // import { join } from 'path';
-import cookieParser from 'cookie-parser';
-import logger from 'morgan';
+import cookieParser from "cookie-parser";
+import logger from "morgan";
 // * Controlador de errores
-import ErrorServer from './errors';
+import ErrorServer from "./errors";
 
-import indexRouter from './routes/index';
-import usersRouter from './routes/users';
+import indexRouter from "./routes/index";
+import usersRouter from "./routes/users";
 
 /**
  * * Se utiliza express-generator
@@ -22,7 +22,7 @@ const app = express();
  * // app.set('view engine', 'jade');
  */
 
-app.use(logger('dev'));
+app.use(logger("dev"));
 app.use(json());
 app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -35,8 +35,8 @@ app.use(cookieParser());
 /**
  * * Creando Endpoint
  */
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
 
 /**
  * * Captura las solicitudes no encontradas en los Endpoint
