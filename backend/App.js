@@ -1,13 +1,22 @@
+import { config } from "dotenv";
 import createError from "http-errors";
 import express, { json, urlencoded } from "express";
+import session from "express-session";
 // // import { join } from 'path';
 import cookieParser from "cookie-parser";
 import logger from "morgan";
+// * login con facebook
+import passport from "passport";
+import { Strategy } from "passport-facebook";
 // * Controlador de errores
-import ErrorServer from "./errors";
 
-import indexRouter from "./routes/index";
-import usersRouter from "./routes/users";
+import ErrorServer from "./errors";
+import LoginRouter from "./routes/Login";
+import configuracion from "./controllers/src/FBConfiguracion";
+import API from "./routes";
+
+config();
+const FacebookStrategy = Strategy;
 
 /**
  * * Se utiliza express-generator
@@ -33,10 +42,45 @@ app.use(cookieParser());
  */
 
 /**
+ * * Accesp con facebook
+ */
+app.use(
+  session({
+    resave: false,
+    saveUninitialized: true,
+    secret: process.env.SECRET_TOKEN
+  })
+);
+
+passport.serializeUser((user, done) => {
+  done(null, user);
+});
+
+passport.deserializeUser((obj, done) => {
+  done(null, obj);
+});
+
+passport.use(
+  new FacebookStrategy(
+    {
+      clientID: configuracion.facebookAuth.clientID,
+      clientSecret: configuracion.facebookAuth.clientSecret,
+      callbackURL: configuracion.facebookAuth.callbackURL,
+      profileFields: ["email", "name"]
+    },
+    (accessToken, refreshToken, profile, done) => {
+      console.log(profile);
+      done(null, profile);
+    }
+  )
+);
+
+/**
  * * Creando Endpoint
  */
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
+
+app.use("/API", API);
+app.use("/API", LoginRouter);
 
 /**
  * * Captura las solicitudes no encontradas en los Endpoint

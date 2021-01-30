@@ -1,5 +1,4 @@
-import _sequelize from "sequelize";
-const { Model, Sequelize } = _sequelize;
+import { Model } from "sequelize";
 
 export default class Usuarios extends Model {
   static init(sequelize, DataTypes) {
@@ -10,6 +9,11 @@ export default class Usuarios extends Model {
           allowNull: false,
           primaryKey: true,
           field: "uid_usuario"
+        },
+        Nombre: {
+          type: DataTypes.STRING(255),
+          allowNull: false,
+          field: "nombre"
         },
         Apellido: {
           type: DataTypes.STRING(255),
@@ -25,6 +29,11 @@ export default class Usuarios extends Model {
           type: DataTypes.STRING(255),
           allowNull: false,
           field: "correo"
+        },
+        Estado: {
+          type: DataTypes.STRING(255),
+          allowNull: false,
+          field: "estado"
         }
       },
       {
@@ -42,5 +51,44 @@ export default class Usuarios extends Model {
       }
     );
     return Usuarios;
+  }
+
+  static Setting() {
+    // * llave primaria
+    const llavepk = this.primaryKeyAttributes[0];
+    // * Estado del registro
+    const campoE = this.fieldAttributeMap.estado;
+    // * objetos para comparacion
+    const Mapobjeto1 = { ...this.fieldAttributeMap };
+    const Mapobjeto2 = { ...this.fieldAttributeMap };
+    // * Eliminados Campos
+    Object.keys(Mapobjeto1).forEach(key => {
+      if (Mapobjeto1[key] === "Estado" || Mapobjeto1[key] === llavepk || key.search("uid") === 0) {
+        delete Mapobjeto1[key];
+      }
+    });
+    // * lista de campos que permitiran busqueda por like
+    const whereLike = Object.values(Mapobjeto1);
+    // * Eliminando Campos
+    Object.keys(Mapobjeto2).forEach(key => {
+      if (key.search("uid") !== 0) {
+        delete Mapobjeto2[key];
+      }
+    });
+    // * lista de campos que permiten consultas and
+    const whereAND = Object.values(Mapobjeto2);
+    // * lista de tablas relacionadas
+    const asocicion = Object.values(this.associations);
+
+    return {
+      campoPk: llavepk,
+      asocicion,
+      condicion: {
+        WhereLike: whereLike,
+        WhereStado: { campoE, valor: "Activo", deleteR: "Desactivado" },
+        Where: whereAND
+      },
+      vista: null
+    };
   }
 }

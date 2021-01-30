@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XMI timestamp="2021-01-29T02:39:32" xmlns:UML="http://schema.omg.org/spec/UML/1.4" xmi.version="1.2" verified="false">
+<XMI timestamp="2021-01-29T04:27:10" xmlns:UML="http://schema.omg.org/spec/UML/1.4" xmi.version="1.2" verified="false">
  <XMI.header>
   <XMI.documentation>
    <XMI.exporter>umbrello uml modeller 2.32.1 http://umbrello.kde.org</XMI.exporter>
@@ -156,6 +156,8 @@
       </UML:Entity>
       <UML:Entity namespace="Entity_Relationship_Model" isSpecification="false" name="Configuracion" isLeaf="false" visibility="public" xmi.id="uLheqp3LMZaFO" isRoot="false" isAbstract="false">
        <UML:EntityAttribute allow_null="0" namespace="uLheqp3LMZaFO" initialValue="" values="" isSpecification="false" name="uid_negocio" dbindex_type="1100" isLeaf="false" visibility="private" xmi.id="ut8g8iwePcyQf" isRoot="false" isAbstract="false" type="ucJsAZRQEvtM6" attributes="" auto_increment="0"/>
+       <UML:EntityAttribute allow_null="0" namespace="uLheqp3LMZaFO" initialValue="" values="" isSpecification="false" name="hora_inicio" dbindex_type="1100" isLeaf="false" visibility="private" xmi.id="uqyVEhUS1LXKl" isRoot="false" isAbstract="false" type="ucJsAZRQEvtM6" attributes="" auto_increment="0"/>
+       <UML:EntityAttribute allow_null="0" namespace="uLheqp3LMZaFO" initialValue="" values="" isSpecification="false" name="hora_fin" dbindex_type="1100" isLeaf="false" visibility="private" xmi.id="uiAbKWY9swPsW" isRoot="false" isAbstract="false" type="ucJsAZRQEvtM6" attributes="" auto_increment="0"/>
        <UML:EntityAttribute allow_null="0" namespace="uLheqp3LMZaFO" initialValue="" values="" isSpecification="false" name="CSC" dbindex_type="1100" isLeaf="false" visibility="private" xmi.id="uyikMqzXrrnfg" isRoot="false" isAbstract="false" type="ucJsAZRQEvtM6" comment="CSC: cantida de sevicios por cita&#xa;" attributes="" auto_increment="0"/>
        <UML:EntityAttribute allow_null="0" namespace="uLheqp3LMZaFO" initialValue="" values="" isSpecification="false" name="TEC" dbindex_type="1100" isLeaf="false" visibility="private" xmi.id="uLY5sfC9OZrdm" isRoot="false" isAbstract="false" type="ucJsAZRQEvtM6" comment="TEC: tiempo estimado por cita&#xa;" attributes="" auto_increment="0"/>
        <UML:EntityAttribute allow_null="0" namespace="uLheqp3LMZaFO" initialValue="" values="" isSpecification="false" name="ITC" dbindex_type="1100" isLeaf="false" visibility="private" xmi.id="uCPJbUfyZafTK" isRoot="false" isAbstract="false" type="ucJsAZRQEvtM6" comment="ITC: intevalo de tiempo entre citas&#xa;" attributes="" auto_increment="0"/>
@@ -225,7 +227,7 @@
          <entitywidget usefillcolor="1" x="-61.3525" usesdiagramfillcolor="0" textcolor="#000000" localid="ukAIoBW6WuisO" autoresize="1" xmi.id="uKCgNuJxDaAQM" fillcolor="#ffff00" height="95" linecolor="#ff0000" y="-169.999" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" showstereotype="1" showattsigs="0" usesdiagramusefillcolor="0" linewidth="0" isinstance="0" width="88"/>
          <entitywidget usefillcolor="1" x="-554.34" usesdiagramfillcolor="0" textcolor="#000000" localid="uirpXanhnmpC0" autoresize="0" xmi.id="uGt17JLz5qSTf" fillcolor="#ffff00" height="100.128" linecolor="#ff0000" y="-309.991" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" showstereotype="1" showattsigs="0" usesdiagramusefillcolor="0" linewidth="0" isinstance="0" width="131.058"/>
          <entitywidget usefillcolor="1" x="-411.098" usesdiagramfillcolor="0" textcolor="#000000" localid="ujgAnP3bnwL2R" autoresize="0" xmi.id="udi0fcdfdrgu1" fillcolor="#ffff00" height="103.846" linecolor="#ff0000" y="-466.946" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" showstereotype="1" showattsigs="0" usesdiagramusefillcolor="0" linewidth="0" isinstance="0" width="134.784"/>
-         <entitywidget usefillcolor="1" x="-346.72" usesdiagramfillcolor="0" textcolor="#000000" localid="ubYCMh6xWUSwW" autoresize="1" xmi.id="uLheqp3LMZaFO" fillcolor="#ffff00" height="113" linecolor="#ff0000" y="-59.0651" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" showstereotype="1" showattsigs="0" usesdiagramusefillcolor="0" linewidth="0" isinstance="0" width="96"/>
+         <entitywidget usefillcolor="1" x="-346.72" usesdiagramfillcolor="0" textcolor="#000000" localid="ubYCMh6xWUSwW" autoresize="1" xmi.id="uLheqp3LMZaFO" fillcolor="#ffff00" height="149" linecolor="#ff0000" y="-59.0651" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" showstereotype="1" showattsigs="0" usesdiagramusefillcolor="0" linewidth="0" isinstance="0" width="96"/>
          <entitywidget usefillcolor="1" x="32.5238" usesdiagramfillcolor="0" textcolor="#000000" localid="ui0j77AVQn59K" autoresize="1" xmi.id="u7Q6FyxJGYXqP" fillcolor="#ffff00" height="95" linecolor="#ff0000" y="15.7974" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" showstereotype="1" showattsigs="0" usesdiagramusefillcolor="0" linewidth="0" isinstance="0" width="101"/>
          <entitywidget usefillcolor="1" x="257.491" usesdiagramfillcolor="0" textcolor="#000000" localid="uphAkHvzQly4a" autoresize="1" xmi.id="ueXiBfl2vd5zP" fillcolor="#ffff00" height="95" linecolor="#ff0000" y="-171.234" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" showstereotype="1" showattsigs="0" usesdiagramusefillcolor="0" linewidth="0" isinstance="0" width="103"/>
          <entitywidget usefillcolor="1" x="-563.687" usesdiagramfillcolor="0" textcolor="#000000" localid="ulh51PCUq9pkG" autoresize="0" xmi.id="u4U90pFEGaVQL" fillcolor="#ffff00" height="131" linecolor="#ff0000" y="-144.695" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" showstereotype="1" showattsigs="0" usesdiagramusefillcolor="0" linewidth="0" isinstance="0" width="155.067"/>
@@ -288,7 +290,7 @@
            <startpoint startx="-488.811" starty="-144.695"/>
            <endpoint endy="-209.863" endx="-488.811"/>
           </linepath>
-          <floatingtext role="710" posttext="" usefillcolor="1" x="0" pretext="+" usesdiagramfillcolor="1" textcolor="none" localid="ufCbWUZXBYUGq" autoresize="1" text="detalle_servicios" xmi.id="uP35bkwM32PPH" fillcolor="none" height="22" linecolor="#ff0000" y="-207.863" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" showstereotype="1" usesdiagramusefillcolor="1" linewidth="0" isinstance="0" width="115"/>
+          <floatingtext role="710" posttext="" usefillcolor="1" x="-432.311" pretext="+" usesdiagramfillcolor="1" textcolor="none" localid="ufCbWUZXBYUGq" autoresize="1" text="detalle_servicios" xmi.id="uP35bkwM32PPH" fillcolor="none" height="22" linecolor="#ff0000" y="-193.571" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" showstereotype="1" usesdiagramusefillcolor="1" linewidth="0" isinstance="0" width="115"/>
          </assocwidget>
          <assocwidget changeabilityB="900" indexa="1" seqnum="" visibilityA="0" widgetbid="udi0fcdfdrgu1" totalcountb="2" usefillcolor="1" indexb="1" usesdiagramfillcolor="1" textcolor="none" localid="ujBUQtWYI63pr" autoresize="1" widgetaid="uZqCZQw37kAYl" changeabilityA="900" xmi.id="uUcjPxybXNxnd" visibilityB="0" fillcolor="none" linecolor="#ff0000" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" totalcounta="2" usesdiagramusefillcolor="1" linewidth="0" type="519">
           <linepath layout="Direct">
@@ -302,7 +304,7 @@
            <startpoint startx="-61.3525" starty="-169.999"/>
            <endpoint endy="-363.1" endx="-276.314"/>
           </linepath>
-          <floatingtext role="710" posttext="" usefillcolor="1" x="-274.314" pretext="+" usesdiagramfillcolor="1" textcolor="none" localid="uXt0h0bEursun" autoresize="1" text="citas_negacios" xmi.id="ukk4xtjkUM7N7" fillcolor="none" height="22" linecolor="#ff0000" y="-361.1" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" showstereotype="1" usesdiagramusefillcolor="1" linewidth="0" isinstance="0" width="103"/>
+          <floatingtext role="710" posttext="" usefillcolor="1" x="-221.978" pretext="+" usesdiagramfillcolor="1" textcolor="none" localid="uXt0h0bEursun" autoresize="1" text="citas_negacios" xmi.id="ukk4xtjkUM7N7" fillcolor="none" height="22" linecolor="#ff0000" y="-308.764" font="Noto Sans,10,-1,0,50,0,0,0,0,0,Regular" showstereotype="1" usesdiagramusefillcolor="1" linewidth="0" isinstance="0" width="103"/>
          </assocwidget>
         </associations>
        </diagram>
@@ -313,7 +315,7 @@
   </UML:Model>
  </XMI.content>
  <XMI.extensions xmi.extender="umbrello">
-  <docsettings viewid="ux1AswT47bpJo" documentation="" uniqueid="uxF1KGWo6250n"/>
+  <docsettings viewid="ux1AswT47bpJo" documentation="" uniqueid="uiAbKWY9swPsW"/>
   <listview>
    <listitem id="Views" open="1" type="800">
     <listitem id="Entity_Relationship_Model" open="1" type="836">
@@ -338,6 +340,8 @@
       <listitem id="uNUD6tKjbyLAA" open="0" type="833"/>
       <listitem id="uIL5E7q5AEUZK" open="0" type="842"/>
       <listitem id="uyikMqzXrrnfg" open="0" type="833"/>
+      <listitem id="uiAbKWY9swPsW" open="0" type="833"/>
+      <listitem id="uqyVEhUS1LXKl" open="0" type="833"/>
       <listitem id="uCPJbUfyZafTK" open="0" type="833"/>
       <listitem id="ungkM9BVz7zpH" open="0" type="841"/>
       <listitem id="uLY5sfC9OZrdm" open="0" type="833"/>

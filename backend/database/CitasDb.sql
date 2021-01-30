@@ -22,9 +22,11 @@
 CREATE TABLE Usuarios (
     Uid_usuario varchar(255) NOT NULL,
     PRIMARY KEY (Uid_usuario),
+    Nombre varchar(255) NOT NULL,
     Apellido varchar(255) NOT NULL,
     Telefono varchar(255) NOT NULL,
-    Correo varchar(255) NOT NULL
+    Correo varchar(255) NOT NULL,
+    Estado varchar(255) NOT NULL
 );
 
 -- ***************************************************************************************
@@ -48,7 +50,8 @@ CREATE TABLE Negocios (
     Nombre varchar(255) NOT NULL,
     Descripcion varchar(255) NOT NULL,
     Uid_usuario varchar(255) NOT NULL,
-    FOREIGN KEY (Uid_usuario) REFERENCES Usuarios (Uid_usuario)
+    FOREIGN KEY (Uid_usuario) REFERENCES Usuarios (Uid_usuario),
+    Estado varchar(255) NOT NULL
 );
 
 -- ***************************************************************************************
@@ -105,7 +108,8 @@ CREATE TABLE Servicios (
     Nombre_servicio varchar(255) NOT NULL,
     Descipcion varchar(255) NOT NULL,
     Url_imagen varchar(255) NOT NULL,
-    Precio decimal NOT NULL
+    Precio decimal NOT NULL,
+    Estado varchar(255) NOT NULL
 );
 
 -- ***************************************************************************************
@@ -118,7 +122,8 @@ CREATE TABLE Citas (
     FOREIGN KEY (Uid_usuario) REFERENCES Usuarios (Uid_usuario),
     Uid_negocio varchar(255) NOT NULL,
     FOREIGN KEY (Uid_negocio) REFERENCES Negocios (Uid_negocio),
-    Fecha timestamp NOT NULL
+    Fecha timestamp NOT NULL,
+    Estado varchar(255) NOT NULL
 );
 
 -- ***************************************************************************************
