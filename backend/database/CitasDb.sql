@@ -26,6 +26,7 @@ CREATE TABLE Usuarios (
     Apellido varchar(255) NOT NULL,
     Telefono varchar(255) NOT NULL,
     Correo varchar(255) NOT NULL,
+    IdFacebook varchar(255) NULL,
     Estado varchar(255) NOT NULL
 );
 
