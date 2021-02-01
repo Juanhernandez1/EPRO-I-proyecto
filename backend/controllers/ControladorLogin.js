@@ -31,9 +31,10 @@ export default function ControladorLogin(Usuarios, Accesos) {
   // * crea un registro enviando un objeto completo de la tabla
   const crearUsuario = async (req, res) => {
     try {
+      // * resive un objeto usuario y uno de acceso
       const { Usuario, Acceso } = req.body;
 
-      const acceso = { ...Acceso, Contrasena: CryptContras(Acceso.Contrasena) };
+      const acceso = { ...Acceso, Contrasena: CryptContras.encriptar(Acceso.Contrasena) };
 
       const datosEmpleado = await Usuarios.create(Usuario);
       let datosAcceso;

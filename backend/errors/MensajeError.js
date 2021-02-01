@@ -69,8 +69,8 @@ const MensajeError = {
   ERREMP: {
     error: {
       message: "No se puede Registrar El usuario \u{26A0}",
-      otros: "Es posible que exista El nombre de usuario",
-      sugerencias: "Cambie El nombre de Usuario "
+      otros: "Es Posible Que Exista Un Registro Con El Email Ingresado",
+      sugerencias: "Cambie El Email o Restablesca Su Contraseña Si la a Olvidado"
     }
   }
 };

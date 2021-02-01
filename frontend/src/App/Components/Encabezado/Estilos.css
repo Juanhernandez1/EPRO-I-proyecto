@@ -1,0 +1,19 @@
+.Contendor {
+  height: 8vh;
+  background-color: rgb(100, 33, 33);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 8vh;
+  width: 150px;
+  background-color: rgb(228, 190, 190);
+}
+
+.menu {
+  height: 8vh;
+  width: 150px;
+  background-color: rgb(228, 190, 190);
+}

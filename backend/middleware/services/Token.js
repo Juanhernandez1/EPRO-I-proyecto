@@ -10,7 +10,7 @@ function createToken(data) {
   const payload = {
     sub: UidUsuario,
     iat: moment().unix(),
-    exp: moment().add(14, "days").unix()
+    exp: moment().add(1, "days").unix()
   };
   return encode(payload, process.env.SECRET_TOKEN);
 }

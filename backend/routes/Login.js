@@ -5,7 +5,7 @@ import controllers from "../controllers";
 const router = Router();
 const { crearUsuario } = controllers.Login;
 /* GET users listing. */
-router.get("/SingUP", crearUsuario);
+router.post("/SingUP", crearUsuario);
 
 router.get(
   "/auth/facebook",
