@@ -6,6 +6,7 @@
     "start": "babel-watch ./bin/www.js",
     "GetModel": "sequelize-auto -o \"./model/public\" -d CitasDB -h localhost -u postgres -p 5432 -x 31539 -e postgres --cm p --cf p --cp p -s public -l esm"
   },
+  "type": "module",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",

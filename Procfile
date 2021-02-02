@@ -1,1 +1,1 @@
-web: node backend/bin/www.js
+web: node --experimental-modules backend/bin/www.js
