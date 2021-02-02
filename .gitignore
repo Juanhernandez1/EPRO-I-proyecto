@@ -6,13 +6,14 @@
 /frontend/node_modules
 /.pnp
 .pnp.js
+.env
 
 # testing
 /coverage
+.env
 
 # production
 /backend/build
-.env
 /frontend/build
 
 # misc
@@ -21,7 +22,9 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.env
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.env
