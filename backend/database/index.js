@@ -3,13 +3,40 @@ import { config } from "dotenv";
 
 config();
 
-const CnDb = new Sequelize(process.env.DATABASE_URL, {
-  dialect: "postgres",
-  protocol: "postgres",
-  dialectOptions: {
-    ssl: true
-  }
-});
+let CnDb;
+if (process.env.DATABASE_URL) {
+  CnDb = new Sequelize(process.env.DATABASE_URL, {
+    dialect: "postgres",
+    protocol: "postgres",
+    ssl: true,
+    dialectOptions: {
+      ssl: {
+        require: true, // This will help you. But you will see nwe error
+        rejectUnauthorized: false // This line will fix new error
+      }
+    }
+  });
+} else if (process.env.LOCAL === "False") {
+  CnDb = new Sequelize(process.env.DB_DATABASE, process.env.DB_USER, process.env.DB_PASS, {
+    dialect: process.env.DB_DIALECT,
+    protocol: process.env.DB_PROTOCOL,
+    port: process.env.DB_PORT,
+    host: process.env.DB_HOST,
+    ssl: true,
+    dialectOptions: {
+      ssl: {
+        require: true, // This will help you. But you will see nwe error
+        rejectUnauthorized: false // This line will fix new error
+      }
+    }
+  });
+} else {
+  CnDb = new Sequelize(process.env.DBL_DATABASE, process.env.DBL_USER, process.env.DBL_PASS, {
+    dialect: process.env.DBL_DIALECT,
+    port: process.env.DBL_PORT,
+    host: process.env.DBL_HOST
+  });
+}
 
 (async () => {
   try {

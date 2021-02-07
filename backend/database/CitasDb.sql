@@ -2,8 +2,8 @@
 -- * Base de Datos para Control de Citas de Tu negocio
 -- * Diseñada por:
 -- *
--- * Version: 1.0.0
--- * Ultima modificación: 29/01/2021
+-- * Version: 2.0.0
+-- * Ultima modificación: 6/02/2021
 -- * servidores de Bases de datos
 -- * - PostgreSQL
 -- ***************************************************************************************
@@ -19,64 +19,64 @@
 -- ***************************************************************************************
 -- * Tablas Usuario
 -- ***************************************************************************************
-CREATE TABLE Usuarios (
-    Uid_usuario varchar(255) NOT NULL,
-    PRIMARY KEY (Uid_usuario),
-    Nombre varchar(255) NOT NULL,
-    Apellido varchar(255) NOT NULL,
-    Telefono varchar(255) NOT NULL,
-    Correo varchar(255) NOT NULL,
-    IdFacebook varchar(255) NULL,
-    Estado varchar(255) NOT NULL
+Create Table Usuarios (
+    Uid_usuario Varchar(255) Not null,
+    Primary Key (Uid_usuario),
+    Nombre Varchar(255) Not null,
+    Apellido Varchar(255) Not null,
+    Telefono Varchar(255) Not null,
+    Correo Varchar(255) Not null Unique,
+    Idfacebook Varchar(255) Null Unique,
+    Estado Varchar(255) Not null
 );
 
 -- ***************************************************************************************
 -- * Tablas Accesos
 -- ***************************************************************************************
-CREATE TABLE Accesos (
-    Uid_usuario varchar(255) NOT NULL,
-    PRIMARY KEY (Uid_usuario),
-    FOREIGN KEY (Uid_usuario) REFERENCES Usuarios (Uid_usuario),
-    Usuario varchar(255) NOT NULL,
-    Contraseña varchar(255) NOT NULL,
-    Tipo char(1) NOT NULL
+Create Table Accesos (
+    Uid_usuario Varchar(255) Not null,
+    Primary Key (Uid_usuario),
+    Foreign Key (Uid_usuario) References Usuarios (Uid_usuario),
+    Usuario Varchar(255) Not null,
+    Contraseña Varchar(255) Not null,
+    Tipo Char(1) Not null
 );
 
 -- ***************************************************************************************
 -- * Tablas Negocios
 -- ***************************************************************************************
-CREATE TABLE Negocios (
-    Uid_negocio varchar(255) NOT NULL,
-    PRIMARY KEY (Uid_negocio),
-    Nombre varchar(255) NOT NULL,
-    Descripcion varchar(255) NOT NULL,
-    Uid_usuario varchar(255) NOT NULL,
-    FOREIGN KEY (Uid_usuario) REFERENCES Usuarios (Uid_usuario),
-    Estado varchar(255) NOT NULL
+Create Table Negocios (
+    Uid_negocio Varchar(255) Not null,
+    Primary Key (Uid_negocio),
+    Nombre Varchar(255) Not null,
+    Descripcion Varchar(255) Not null,
+    Uid_usuario Varchar(255) Not null,
+    Foreign Key (Uid_usuario) References Usuarios (Uid_usuario),
+    Estado Varchar(255) Not null
 );
 
 -- ***************************************************************************************
 -- * Tablas Negocios Contacto
 -- ***************************************************************************************
-CREATE TABLE Inf_contato (
-    Uid_negocio varchar(255) NOT NULL,
-    PRIMARY KEY (Uid_negocio),
-    FOREIGN KEY (Uid_negocio) REFERENCES Negocios (Uid_negocio),
-    Telefono varchar(255) NOT NULL,
-    Redes_sociales jsonb NOT NULL,
-    Email varchar(255) NOT NULL
+Create Table Inf_contato (
+    Uid_negocio Varchar(255) Not null,
+    Primary Key (Uid_negocio),
+    Foreign Key (Uid_negocio) References Negocios (Uid_negocio),
+    Telefono Varchar(255) Not null,
+    Redes_sociales Jsonb Not null,
+    Email Varchar(255) Not null Unique
 );
 
 -- ***************************************************************************************
 -- * Tablas Negocios Direcciones
 -- ***************************************************************************************
-CREATE TABLE Direcciones (
-    Uid_negocio varchar(255) NOT NULL,
-    PRIMARY KEY (Uid_negocio),
-    FOREIGN KEY (Uid_negocio) REFERENCES Negocios (Uid_negocio),
-    Departamento varchar(255) NOT NULL,
-    Direccion varchar(255) NOT NULL,
-    Url_direccion varchar(255) NOT NULL
+Create Table Direcciones (
+    Uid_negocio Varchar(255) Not null,
+    Primary Key (Uid_negocio),
+    Foreign Key (Uid_negocio) References Negocios (Uid_negocio),
+    Departamento Varchar(255) Not null,
+    Direccion Varchar(255) Not null,
+    Url_direccion Varchar(255) Not null
 );
 
 -- ***************************************************************************************
@@ -86,53 +86,68 @@ CREATE TABLE Direcciones (
 -- TEC: tiempo estimado por cita
 -- ITC: intevalo de tiempo entre citas
 -- CCD: Cantidad de Citas por Dia
-CREATE TABLE Configuracion (
-    Uid_negocio varchar(255) NOT NULL,
-    PRIMARY KEY (Uid_negocio),
-    FOREIGN KEY (Uid_negocio) REFERENCES Negocios (Uid_negocio),
-    hora_inicio varchar(255) NOT NULL,
-    hora_fin varchar(255) NOT NULL,
-    Csc varchar(255) NOT NULL,
-    Tec varchar(255) NOT NULL,
-    Itc varchar(255) NOT NULL,
-    Ccd varchar(255) NOT NULL
+Create Table Configuracion (
+    Uid_negocio Varchar(255) Not null,
+    Primary Key (Uid_negocio),
+    Foreign Key (Uid_negocio) References Negocios (Uid_negocio),
+    Hora_inicio Varchar(255) Not null,
+    Hora_fin Varchar(255) Not null,
+    Csc Varchar(255) Not null,
+    Tec Varchar(255) Not null,
+    Itc Varchar(255) Not null,
+    Ccd Varchar(255) Not null,
+    Dias_laborales Varchar(255) Not null,
+    Tiempo_almuerzo Varchar(255) Not null
 );
 
 -- ***************************************************************************************
 -- * Tablas Negocios Servicios
 -- ***************************************************************************************
-CREATE TABLE Servicios (
-    Id_servicio varchar(255) NOT NULL,
-    PRIMARY KEY (Id_servicio),
-    Uid_negocio varchar(255) NOT NULL,
-    FOREIGN KEY (Uid_negocio) REFERENCES Negocios (Uid_negocio),
-    Nombre_servicio varchar(255) NOT NULL,
-    Descipcion varchar(255) NOT NULL,
-    Url_imagen varchar(255) NOT NULL,
-    Precio decimal NOT NULL,
-    Estado varchar(255) NOT NULL
+Create Table Servicios (
+    Id_servicio Varchar(255) Not null,
+    Primary Key (Id_servicio),
+    Uid_negocio Varchar(255) Not null,
+    Foreign Key (Uid_negocio) References Negocios (Uid_negocio),
+    Nombre_servicio Varchar(255) Not null,
+    Descipcion Varchar(255) Not null,
+    Url_imagen Varchar(255) Not null,
+    Precio decimal Not null,
+    Estado Varchar(255) Not null
+);
+
+-- ***************************************************************************************
+-- * Tablas Dias Bloqueados o Libres
+-- ***************************************************************************************
+Create Table Bloqueados (
+    Uid_negocio Varchar(255) Not null,
+    Primary Key (Uid_negocio),
+    Foreign Key (Uid_negocio) References Negocios (Uid_negocio),
+    Dia_inicio date Not null,
+    Dia_final date Not null,
+    Mañana boolean Not null,
+    Tarde boolean Not null
 );
 
 -- ***************************************************************************************
 -- * Tablas Citas
 -- ***************************************************************************************
-CREATE TABLE Citas (
-    Id_cita varchar(255) NOT NULL,
-    PRIMARY KEY (Id_cita),
-    Uid_usuario varchar(255) NOT NULL,
-    FOREIGN KEY (Uid_usuario) REFERENCES Usuarios (Uid_usuario),
-    Uid_negocio varchar(255) NOT NULL,
-    FOREIGN KEY (Uid_negocio) REFERENCES Negocios (Uid_negocio),
-    Fecha timestamp NOT NULL,
-    Estado varchar(255) NOT NULL
+Create Table Citas (
+    Id_cita Varchar(255) Not null,
+    Primary Key (Id_cita),
+    Uid_usuario Varchar(255) Not null,
+    Foreign Key (Uid_usuario) References Usuarios (Uid_usuario),
+    Uid_negocio Varchar(255) Not null,
+    Foreign Key (Uid_negocio) References Negocios (Uid_negocio),
+    Fecha Timestamp Not null,
+    Estado Varchar(255) Not null
 );
 
 -- ***************************************************************************************
 -- * Tablas Citas Detalle
 -- ***************************************************************************************
-CREATE TABLE Detalle (
-  id_cita varchar(255) NOT NULL ,
-  FOREIGN KEY (id_cita) REFERENCES Citas (id_cita),
-  id_servicio varchar(255) NOT NULL,
-  FOREIGN KEY (id_servicio) REFERENCES Servicios (id_servicio)
+Create Table Detalle (
+    Id_cita Varchar(255) Not null,
+    Foreign Key (Id_cita) References Citas (Id_cita),
+    Id_servicio Varchar(255) Not null,
+    Foreign Key (Id_servicio) References Servicios (Id_servicio)
 );
