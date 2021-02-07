@@ -32,6 +32,8 @@ npm start
 - [Git](https://git-scm.com/)
 - [Postgres](https://bitnami.com/stack/lamp/installer)
 - [Node js](https://nodejs.org/es/)
+- [Umbrello UML](https://download.kde.org/stable/umbrello/latest/win64/)
+
 
 ## aprender
 
