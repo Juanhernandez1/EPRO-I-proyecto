@@ -22,5 +22,6 @@
   },
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "files.autoSave": "afterDelay"
+  "files.autoSave": "afterDelay",
+  "files.eol": "\n"
 }

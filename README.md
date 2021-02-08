@@ -19,6 +19,13 @@ npm start
 
 ---
 
+# Mockup
+
+- [Piblico](https://ninjamock.com/s/RX9ZHHx)
+- [Administración Usuario y Negocio](https://ninjamock.com/s/GX9ZHHx)
+
+---
+
 **frontend @ http://localhost:3000/**
 
 **backend @ http://localhost:3100/**
@@ -33,7 +40,6 @@ npm start
 - [Postgres](https://bitnami.com/stack/lamp/installer)
 - [Node js](https://nodejs.org/es/)
 - [Umbrello UML](https://download.kde.org/stable/umbrello/latest/win64/)
-
 
 ## aprender
 

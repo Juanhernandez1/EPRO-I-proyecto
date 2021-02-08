@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import "./Estilos.css";
 // * pascal case para rodas las funcion
@@ -10,7 +10,6 @@ function Encabezado(props) {
     <header className='Contendor'>
       <div className='logo'> </div>
       <h1>{`${texto} ${state}`}</h1>
-
       <div className='menu'>
         <button onClick={e => setstate(!state)}>Cambiar estado</button>
       </div>
