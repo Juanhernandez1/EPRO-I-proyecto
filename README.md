@@ -21,7 +21,7 @@ npm start
 
 # Mockup
 
-- [Piblico](https://ninjamock.com/s/RX9ZHHx)
+- [Publico](https://ninjamock.com/s/RX9ZHHx)
 - [Administración Usuario y Negocio](https://ninjamock.com/s/GX9ZHHx)
 
 ---
