@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently --kill-others \"cd frontend && npm start\" \"cd backend && npm start\"",
+    "start": "cross-env concurrently --kill-others \"cd frontend && npm start\" \"cd backend && npm rum start-dev\"",
+    "start-Front": "cross-env concurrently --kill-others \"cd frontend && npm start\" ",
+    "start-Back": "cross-env concurrently --kill-others  \"cd backend && npm rum start-dev\"",
     "formatG": "prettier --write .",
     "formatH": "pretty-quick"
   },
@@ -24,6 +26,7 @@
     "concurrently": "^5.3.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "eslint": "^7.18.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^7.2.0",
