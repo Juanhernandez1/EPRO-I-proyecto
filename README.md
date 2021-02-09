@@ -9,7 +9,7 @@ dentro del forlde de la app =>
 
 ```
 cd EPRO-I-proyecto
-npm start
+npm run start-Front
 
 ```
 
