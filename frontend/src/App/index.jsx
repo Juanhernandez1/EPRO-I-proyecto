@@ -1,12 +1,13 @@
 import "./App.css";
-import "normalize.css";
-import Emcabezado from "./Components/Encabezado";
-const arreglo = ["fruta1", "fruta2"];
+import Layout from "./Layout";
+import Index from "./Views/Index";
 
 function App() {
   return (
     <div className='App'>
-      <Emcabezado texto='ya valio' />
+      <Layout>
+        <Index />
+      </Layout>
     </div>
   );
 }

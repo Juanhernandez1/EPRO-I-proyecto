@@ -1,0 +1,114 @@
+.Banner {
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  justify-content: space-between;
+  display: flex;
+  height: 45vh;
+}
+
+.AjusteIndex {
+  justify-content: start !important;
+  align-items: start !important;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.BuscadorIndex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-right: none;
+}
+
+input.placeholder {
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  text-align: center;
+}
+
+#Buscador {
+  height: 5.2vh;
+  border-radius: 2em 0 0 2em;
+  border: #384860 solid 1px;
+  outline: none;
+  text-align: center;
+}
+
+.BtnBuscar {
+  width: 2.5%;
+  height: 6.2vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1671f;
+  border-radius: 0em 2em 2em 0em;
+  border: #384860 solid 1px;
+  border-left: #384860 solid 1px;
+  outline: none;
+}
+
+.BtnBuscar:active {
+  transform: translateY(0.4px);
+}
+
+.contendorCards {
+  width: -webkit-fill-available;
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* justify-content: center; */
+  justify-items: center;
+  margin-top: 10px;
+}
+
+.card {
+  width: 28%;
+  height: 36vh;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 1em;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+}
+
+.Canimacion {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 40%;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}

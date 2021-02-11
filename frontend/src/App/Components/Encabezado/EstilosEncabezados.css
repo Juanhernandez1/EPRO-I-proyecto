@@ -1,0 +1,78 @@
+.App-header {
+  background-color: #384860;
+  min-height: 7vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.C1Encabezado {
+  margin: 12px 15px 0px 15px;
+}
+
+.InicioEncabezados {
+  display: flex;
+  align-items: center;
+}
+
+.NavegacionEncabezados {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: row;
+}
+
+.menuGEncabezados {
+  width: -webkit-fill-available;
+  height: 2px;
+  background-color: transparent;
+  margin-top: 5px;
+}
+
+.MenuEncabezados:hover .menuGEncabezados {
+  width: -webkit-fill-available;
+  height: 2px;
+  background-color: #ffffff;
+  margin-top: 5px;
+}
+
+.NavegacionEncabezados ul {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: inherit;
+  width: -webkit-fill-available;
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+
+.MenuEncabezados {
+  width: 75px;
+  margin: 0px 5px 5px 5px;
+}
+
+.subralladoActivo {
+  width: -webkit-fill-available;
+  height: 2px;
+  background-color: #ffffff !important;
+  margin-top: 5px;
+}
+
+.Nosubrallado {
+  width: -webkit-fill-available;
+  height: 2px;
+  background-color: transparent;
+  margin-top: 5px;
+}
+
+.MostrarUser {
+  display: block;
+}
+
+.NoMostrarUser {
+  display: none;
+}
